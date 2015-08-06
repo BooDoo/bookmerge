@@ -8,10 +8,10 @@ I've stripped this down to the simplest file layout so everything's more or less
 ### Usage:
 ```
 bundle install
-bundle exec rackup -p $BOOKMERGE_PORT
+BOOKMERGE_PORT=8777 ruby bookmerge.rb
 ```
 
-This will serve the app off http://127.0.0.1:{BOOKMERGE_PORT}/
+This will serve the app off http://127.0.0.1:8777/
 
 ### Behavior:
   Left-hand column has a form with two `<select>` elements (populated from the `Corpus`), and buttons to "Get A Line" or "Clear Lines"  
