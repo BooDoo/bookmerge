@@ -1,37 +1,12 @@
-# require 'mechanize'
-# mechanize = Mechanize.new
-# text1 = mechanize.get('http://www.gutenberg.org/files/12/12-h/12-h.htm')
-# puts text1.title
-# I'd like to use Mechanize but Gutenberg doesn't have support for "non-human"
-# users, so keeping this on the backburner for now.
-
+gem 'sinatra'
+gem 'json'
+gem 'markov_chains'
 
 require 'markov_chains'
 require 'sinatra'
 require './corpus.rb'
-# corpus = {
-#   'The Adventures of Tom Sawyer' => 'tom_sawyer.txt',
-#   'Alice in Wonderland' => 'alice_in_wonderland.txt',
-#   'Anne of Green Gables' => 'anne_of_green_gables.txt',
-#   'Beowulf' => 'beowulf.txt',
-#   'The Bible' => 'the_bible.txt',
-#   'The Brothers Grimm Fairy Tales' => 'grimms.txt',
-#   'Jane Eyre' => 'jane_eyre.txt',
-#   'Kama Sutra' => 'kama_sutra.txt',
-#   'Little Women' => 'little_women.txt',
-#   'Metamorphosis' => 'metamorphosis.txt',
-#   'My Life, by Helen Keller' => 'helen_keller.txt',
-#   'Peter Pan' => 'peter_pan.txt',
-#   'A Picture of Dorian Gray' => 'dorian_gray.txt',
-#   'Pride & Prejudice' => 'pride_and_prejudice.txt',
-#   'Sherlock Holmes' => 'sherlock_holmes.txt',
-#   '12 Years a Slave' => 'twelve_years_a_slave.txt',
-#   'Ulysses' => 'ulysses.txt',
-#   'War of the Worlds' => 'war_of_the_worlds.txt',
-#   'The Wonderful Wizard of Oz' => 'wizard_of_oz.txt',
-#   'The Yellow Wallpaper' => 'yellow_wallpaper.txt'
-# }
 
+set :port, ENV['BOOKMERGE_PORT']
 set :public_folder, File.dirname(__FILE__) + '/static'
 enable :logging
 enable :sessions
