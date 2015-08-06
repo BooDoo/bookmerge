@@ -1,6 +1,9 @@
-# bookmerge (Sinatra)
+# bookmerge (Sinatra -- FLAT)
 
-Here's a version of __bookmerge__ that serves up a Sinatra-based application.
+Here's a version of __bookmerge__ that serves up a Sinatra-based application.  
+  
+I've stripped this down to the simplest file layout so everything's more or less in one place for ease of reference. Not a good structure!
+  
 
 ### Usage:
 ```

@@ -1,7 +1,3 @@
-gem 'sinatra'
-gem 'json'
-gem 'markov_chains'
-
 require 'markov_chains'
 require 'sinatra'
 require './corpus.rb'
